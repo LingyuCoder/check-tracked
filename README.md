@@ -26,7 +26,7 @@ checker('/Users/xxx/project_dir') // default process.cwd()
     if(result.success) {
       console.log('Passed');
     } else {
-      console.log(result.message);
+      console.log(result.detail);
     }
   }).catch(e => console.error(e.message));
 ```

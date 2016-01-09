@@ -20,7 +20,10 @@
     "type": "git",
     "url": "https://github.com/LingyuCoder/check-tracked"
   },
-  "keywords": [],
+  "keywords": [
+    "check",
+    "tracked"
+  ],
   "bugs": {
     "url": "https://github.com/LingyuCoder/check-tracked/issues"
   },

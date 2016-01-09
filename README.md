@@ -9,7 +9,7 @@
 [![License](http://img.shields.io/npm/l/check-tracked.svg?style=flat-square)](LICENSE)
 [![npm download](https://img.shields.io/npm/dm/check-tracked.svg?style=flat-square)](https://npmjs.org/package/check-tracked)
 
-Check whether all files have been tracked
+> Check whether all files have been tracked
 
 ## Installation
 
@@ -18,6 +18,18 @@ $ npm install --save check-tracked
 ```
 
 ## Usage
+
+```javascript
+const checker = require('check-tracked');
+checker('/Users/xxx/project_dir') // default process.cwd()
+  .then(result => {
+    if(result.success) {
+      console.log('Passed');
+    } else {
+      console.log(result.message);
+    }
+  }).catch(e => console.error(e.message));
+```
 
 ## Test
 

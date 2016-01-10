@@ -23,12 +23,21 @@ $ npm install --save check-tracked
 const checker = require('check-tracked');
 checker('/Users/xxx/project_dir') // default process.cwd()
   .then(result => {
+    /*
+    {
+      success: Boolean, // check passed
+      detail: ArrayOf(String) // untracked file list
+    }
+    */
     if(result.success) {
       console.log('Passed');
     } else {
       console.log(result.detail);
     }
-  }).catch(e => console.error(e.message));
+  })
+  .catch(e => console.error(e.message));
+
+
 ```
 
 ## Test

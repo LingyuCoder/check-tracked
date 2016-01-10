@@ -1,6 +1,6 @@
 {
   "name": "check-tracked",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Check whether all files have been tracked",
   "main": "index.js",
   "scripts": {

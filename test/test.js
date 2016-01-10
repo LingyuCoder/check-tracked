@@ -15,13 +15,13 @@ describe('check-tracked', () => {
     fs.writeFileSync(path.join(__dirname, 'newfile'), 'test', 'utf-8');
     return checker().should.be.fulfilledWith({
       success: false,
-      detail: `?? test/newfile\n`
+      detail: ['test/newfile']
     });
   });
   it('should resolve object with success true no untracked files', () => {
     return checker(process.cwd()).should.be.fulfilledWith({
       success: true,
-      detail: ''
+      detail: []
     });
   });
   it('should reject when error', () => {
